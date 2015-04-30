@@ -1,0 +1,81 @@
+Template Básico para uso do Google C++ Testing Framework (GTest)
+===============================================
+
+Autores
+------------------------
+  Vitor Gomes <vitor@ieav.cta.br>
+  Gustavo Veras <gustavo@inpe.br>
+
+
+Sobre
+------------------------
+Esse template é uma sugestão de estrutura para projeto em C++ que utilize o GTest [1]
+
+Estrutura de diretórios
+------------------------
+  ${TEMPLATE_DIR}
+    Raíz do template. Contém o arquivo README, LICENSE e Makefile principal
+  ${TEMPLATE_DIR}/src 
+    Contém os códigos-fonte da aplicação (Os arquivos exemplos podem ser apagados) 
+  ${TEMPLATE_DIR}/include
+    Contém os arquivos de cabeçalho da aplicação (Os arquivos exemplos podem ser apagados)
+  ${TEMPLATE_DIR}/test
+    Contém código-fonte dos testes e Makefile para construção do executável do teste 
+    (Não remova o arquivo mainTestAll.cpp)
+
+Instalação do GTest
+------------------------
+
+  1) Baixe a versão 1.7.0 do framework em https://googletest.googlecode.com/files/gtest-1.7.0.zip
+
+  2) Execute os comandos
+
+    unzip gtest-1.7.0.zip
+    cd gtest-1.7.0
+    ./configure
+    make
+    sudo mv gtest-1.7.0 /opt
+    ln -s /opt/gtest-1.7.0 /opt/gtest
+
+  3) /opt é uma sugestão de destino do framework, sendo possível o uso em outros locais. 
+    O Makefile de test utiliza esse destino como padrão. É necessário alterar a variável 
+    GTEST_DIR caso a pasta destino seja outra.
+
+
+### Testando ### 
+------------------------
+Entre na pasta do template e digite:
+
+make run test
+
+O comando fará a compilação dos códigos e a execução do teste e da aplicação.
+Se a saída não tiver algo como:
+
+    1 FAILED TEST
+
+a instalação e o framework estão funcionando corretamente.
+
+
+Usando o framework
+------------------------
+O framework possui alguns arquivos para teste que devem ser apagados antes de iniciar seu projeto. 
+Esses arquivos são:
+
+    ${TEMPLATE_DIR}/src/
+                        Foo.cpp
+                        main.cpp
+    ${TEMPLATE_DIR}/include/
+                        Foo.hpp
+    ${TEMPLATE_DIR}/test/
+                        FooTest.cpp
+
+Referências a esses arquivos também aparecem nos arquivos Makefile e test/Makefile. Nesses dois 
+arquivos existem variáveis que DEVEM ser alteradoas. 
+
+
+Mais 
+------------------------
+
+[1] Google C++ Testing Framework: http://code.google.com/p/googletest/
+
+
