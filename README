@@ -20,8 +20,7 @@ Estrutura de diretórios
   ${TEMPLATE_DIR}/include
     Contém os arquivos de cabeçalho da aplicação (Os arquivos exemplos podem ser apagados)
   ${TEMPLATE_DIR}/test
-    Contém código-fonte dos testes e Makefile para construção do executável do teste 
-    (Não remova o arquivo mainTestAll.cpp)
+    Contém código-fonte dos testes e Makefile para construção do executável do teste (Não remova o arquivo mainTestAll.cpp)
 
 Instalação do GTest
 ------------------------
@@ -37,10 +36,8 @@ Instalação do GTest
     sudo mv gtest-1.7.0 /opt
     ln -s /opt/gtest-1.7.0 /opt/gtest
 
-  3) /opt é uma sugestão de destino do framework, sendo possível o uso em outros locais. 
-    O Makefile de test utiliza esse destino como padrão. É necessário alterar a variável 
+  3) /opt é uma sugestão de destino do framework, sendo possível o uso em outros locais. O Makefile de test utiliza esse destino como padrão. É necessário alterar a variável 
     GTEST_DIR caso a pasta destino seja outra.
-
 
 ### Testando ### 
 ------------------------
@@ -69,9 +66,7 @@ Esses arquivos são:
     ${TEMPLATE_DIR}/test/
                         FooTest.cpp
 
-Referências a esses arquivos também aparecem nos arquivos Makefile e test/Makefile. Nesses dois 
-arquivos existem variáveis que DEVEM ser alteradoas. 
-
+Referências a esses arquivos também aparecem nos arquivos Makefile e test/Makefile. Nesses dois arquivos existem variáveis que DEVEM ser alteradoas. 
 
 Mais 
 ------------------------
